@@ -1,5 +1,6 @@
 from django.db import models
 from jalali_date import datetime2jalali
+from accounts.models import User
 from labscience.settings import DATE_INPUT_FORMATS, TIME_INPUT_FORMATS
 from django.utils.translation import gettext as _
 
@@ -24,3 +25,4 @@ class GeneralDateModel(models.Model):
 
     def get_updated_at_jalali(self):
         return datetime2jalali(self.updated_at).strftime(f'{DATE_INPUT_FORMATS} - {TIME_INPUT_FORMATS}')
+

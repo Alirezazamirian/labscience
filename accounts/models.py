@@ -1,4 +1,3 @@
-import jdatetime
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.db import models
@@ -8,7 +7,6 @@ from jalali_date import datetime2jalali
 from rest_framework.exceptions import ValidationError
 import re
 from django.contrib.auth.hashers import make_password
-from utils.models import GeneralDateModel
 from django.utils import timezone
 from labscience.settings import DATE_INPUT_FORMATS, TIME_INPUT_FORMATS
 
